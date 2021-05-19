@@ -78,3 +78,29 @@ iterate through binary, slice out the first 8-bit binary, convert to letter, pus
 
 # ===============
 
+def csRaindrops(number):
+    
+    newStr = ""
+    arr = [3, 5, 7]
+    arr_2 = ["Pling", "Plang", "Plong"]
+    
+    for i in range(len(arr)):
+        if number % arr[i] == 0:
+            newStr += arr_2[i]
+    
+    if newStr == "":
+        return str(number)
+    else:
+        return newStr
+
+'''
+
+U:
+
+28 
+output = "Plong"
+
+30
+output = "PlingPlang"
+
+'''
