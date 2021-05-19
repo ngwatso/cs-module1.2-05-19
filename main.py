@@ -34,13 +34,13 @@ def csReverseIntegerBits(n):
 
 U:
 
-256 ==> 100000000
+256 ==>  100000000
 output = 000000001
 
-932 ==> 1101000000
+932 ==>  1101000000
 output = 0000001011
 
-622 ==> 1001101110
+622 ==>  1001101110
 output = 0111011001
 
 P:
@@ -48,3 +48,33 @@ P:
 convert integer to binary, convert to string and reverse, convert back to integer
 
 '''
+
+# ===============
+
+def csBinaryToASCII(binary):
+
+    counter = 0
+    newStr = ""
+    
+    while counter < len(binary):
+        x = binary[counter:counter+8]
+        l = int(x, 2)
+        newStr += chr(l)
+        counter += 8
+        
+    return newStr
+
+
+'''
+
+U:
+
+"011011000110000101101101011000100110010001100001"
+output = "lambda"
+
+iterate through binary, slice out the first 8-bit binary, convert to letter, push to newStr.  Increment slice by 8, continue.
+
+'''
+
+# ===============
+
